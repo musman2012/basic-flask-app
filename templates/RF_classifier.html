@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.tab_link
+{
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+}
+
+.tab button 
+{
+	background-color: inherit;
+	color: #fff;
+	float: left;
+	border: solid black 1px;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+}
+
+.tab button.active
+{
+	background-color: #ccc;
+}
+
+.tab_content
+{
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+	flex-direction: column;
+	flex: 1;
+}
+
+.grid
+{
+	position: relative;
+}
+
+.item
+{
+	display: block;
+	position: absolute;
+	margin: 5px;
+	z-index: 1;
+	background: #ccc;
+	color: #000;
+}
+
+.item-content
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.item.muuri-item-dragging {
+  z-index: 3;
+}
+.item.muuri-item-releasing {
+  z-index: 2;
+}
+.item.muuri-item-hidden {
+  z-index: 0;
+}
+.page
+{
+	display: flex;
+	flex-direction: row;
+	padding: 2vh 2vw 2vh 2vw;
+	height: 1000px;
+}
+
+.target_pane
+{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	background-color: #eee;
+	text-align: center;
+	padding-right: 20px;
+}
+
+.classifier_pane
+{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 4;
+}
+body
+{
+	background-color: #f9f9f9;
+}
+
+#outcomes_list
+{
+	list-style-type: none;
+	text-align: left;
+}
+
+.outcomes li.active
+{
+	background-color: #999;
+}
+
+#importance_grid
+{
+	width: 90%;
+}
+
+.map_vis
+{
+	border: solid black 2px;
+	display: inline-block;
+	overflow: hidden;
+	background-color: white;
+}
+svg
+{
+	float: left;
+}
+</style>
+<link rel="stylesheet" href="../static/css/w3.css">
+<link rel="stylesheet" href="../static/css/w3-theme-black.css">
+</head>
+<body>
+<div class="page">
+	<div class="target_pane">
+		<h1>Outcome</h1>
+		<div>
+			<ul id="outcomes_list">
+				<li>
+					<b>Clinical Outcomes</b>
+					<ul id="clinical_outcomes" class="outcomes w3-ul w3-hoverable">
+					</ul>
+				</li>
+				<li>
+					<b>Provider Outcomes</b>
+					<ul id="provider_outcomes" class="outcomes w3-ul w3-hoverable">
+					</ul>
+				</li>
+			</ul>
+			<div>
+				<input type="button" id="run_RF_button" value="Find Predictors" style="background-color: grey"> </input>
+				<label for="number_of_predictors">Number of Predictors:</label>
+				<input type="number" id="number_of_predictors_picker" name="number_of_predictors" min="1" max="100" value="5"></input>
+			</div>
+		</div>
+	</div>
+	
+	<div class="classifier_pane">
+		<h1>VisualRF</h1>
+		<div class="tab w3-bar w3-theme w3-left-align w3-large">
+			<button class="tab_link w3-bar-item w3-hover-white" id="details_tab_button">Details</button>
+			<button class="tab_link w3-bar-item w3-hover-white" id="vis_tab_button">Visualisation</button>
+			<button class="tab_link w3-bar-item" id="notes_tab_button">Notes</button>
+			<button class="tab_link w3-bar-item" id="map_tab_button">Class Mappings</button>
+		</div>
+
+		<div id="details_tab" class="tab_content">
+			<div>
+
+			</div>
+		</div>
+
+		<div id="vis_tab" class="grid tab_content">
+	
+		</div>
+
+		<div id="notes_tab" class="tab_content">
+		<h2>NOTES</h2>
+		</div>
+
+		<div id="map_tab" class="tab_content">
+		<h2>MAPPINGS</h2>
+		</div>
+	</div>
+</div>
+
+<script src="../static/vendor/d3.min.js" type="text/javascript"></script>
+<script src="../static/vendor/d3-queue.min.js" type="text/javascript"></script>
+<script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+<script src="../static/vendor/topojson.min.js" type="text/javascript"></script>
+<script src="../static/vendor/muuri.min.js" type="text/javascript"></script>
+<script src="../static/vendor/jquery.min.js"></script>
+<script src="../static/js/main.js" type="text/javascript"></script>
+</body>
+</html>

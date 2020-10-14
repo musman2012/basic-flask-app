@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {"id": "Myriel", "group": 1},
+    {"id": "Napoleon", "group": 1},
+    {"id": "Valjean", "group": 2},
+    {"id": "Marguerite", "group": 3},
+    {"id": "Listolier", "group": 3}
+   
+  ],
+  "links": [
+    {"source": "Napoleon", "target": "Myriel", "value": 1},
+    {"source": "Marguerite", "target": "Valjean", "value": 1},
+    {"source": "Listolier", "target": "Valjean", "value": 1},
+    {"source": "Myriel", "target": "Valjean", "value": 1},
+    {"source": "Listolier", "target": "Myriel", "value": 1}
+   
+  ]
+}
