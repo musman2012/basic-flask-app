@@ -1,4 +1,4 @@
-# Visualizing Healthcare Data under Yorkshire & Humber Care Record
+# Visualizing Healthcare Data under Yorkshire & Humber Care Record (Smriti)
 
 This small repo demonstrates a proper file structure for a Flask app. The folders named *static* and *templates* are required.
 
