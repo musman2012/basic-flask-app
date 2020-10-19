@@ -1,30 +1,136 @@
-{% extends 'base.html' %}
+<!--{% extends 'base.html' %} -->
 
+<body>
 {% block body %}
 
 <!-- to be filled by the Python script -->
 <h1>{{ the_title }}</h1>
 
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:width;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        
+        <div class="w3-container">
+          
+          <p>Something about diabetes</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div id="progress" class="w3-container w3-center w3-round-xlarge w3-teal"></div>
+          </div>
+           <p>Photography</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+              <div class="w3-center w3-text-white">80%</div>
+            </div>
+          </div>
+          <p>Illustrator</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+          </div>
+          <p>Media</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+          </div>
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p>English</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          </div>
+          <p>Spanish</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
+          </div>
+          <p>German</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+          </div>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+    
+
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+        <img alt="Photo: Bengal Tiger" src="{{ url_for('static', filename='images/health2.png') }}">
+  <!-- <p class="credit">Photo by John and Karen Hollingsworth, retouched by Zwoenitzer (Fish &amp; Wildlife Service, ID WO0409-33F) [Public domain] <a href="https://commons.wikimedia.org/wiki/File%3APanthera_tigris_tigris.jpg" target="_blank">via Wikimedia Commons</a></p> -->
+
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>
+  <!--
+  {
+    title: "SI",
+    field: "vul_percentile",
+    cellStyle: {
+      maxWidth: 100,
+      minWidth: 100
+    },
+    headerStyle: {
+      maxWidth: 100,
+      minWidth: 100
+    },
+    render: rowData => (
+      <Tooltip title={rowData.node_influence}>
+        <BorderLinearProgress
+          color={"secondary"}
+          variant="determinate"
+          value={rowData.vul_percentile * 100}
+        />
+      </Tooltip>
+    )
+  }
+  -->
+    <ul>
+      <!-- note how items from routes in the the Python script are linked -->
+      <!--  <li><a href="{{ url_for('myth') }}">In myth and legend</a></li>  -->
+      <li><a href="{{ url_for('schemaExp') }}">Schema Explorer</a></li>
+      <li><a href="{{ url_for('rf_class') }}">Random Forest Classifier</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra orci at consectetur placerat. Suspendisse nunc tortor, ornare non accumsan et, tempus vitae leo. Maecenas vel mauris a est ultricies laoreet vel sed tortor. Sed enim ante, posuere eget augue sed, dictum tempor neque. Sed pharetra sed mauris euismod viverra. Duis ornare rutrum porttitor. Praesent et nunc scelerisque, malesuada lorem viverra, vehicula arcu. Ut scelerisque sapien massa, id vehicula eros venenatis in. Cras vel hendrerit purus. Cras semper lorem ut purus cursus, id lobortis quam blandit. Nulla scelerisque tincidunt nisl non fringilla.</p>
+
+  
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+
 <!-- note how items from the "static" folder are linked -->
-<img alt="Photo: Bengal Tiger" src="{{ url_for('static', filename='images/health2.png') }}">
-<!-- <p class="credit">Photo by John and Karen Hollingsworth, retouched by Zwoenitzer (Fish &amp; Wildlife Service, ID WO0409-33F) [Public domain] <a href="https://commons.wikimedia.org/wiki/File%3APanthera_tigris_tigris.jpg" target="_blank">via Wikimedia Commons</a></p> -->
-
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-</p>
-
-<ul>
-  <!-- note how items from routes in the the Python script are linked -->
-  <!--  <li><a href="{{ url_for('myth') }}">In myth and legend</a></li>  -->
-  <li><a href="{{ url_for('schemaExp') }}">Schema Explorer</a></li>
-  <li><a href="{{ url_for('rf_class') }}">Random Forest Classifier</a></li>
-</ul>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra orci at consectetur placerat. Suspendisse nunc tortor, ornare non accumsan et, tempus vitae leo. Maecenas vel mauris a est ultricies laoreet vel sed tortor. Sed enim ante, posuere eget augue sed, dictum tempor neque. Sed pharetra sed mauris euismod viverra. Duis ornare rutrum porttitor. Praesent et nunc scelerisque, malesuada lorem viverra, vehicula arcu. Ut scelerisque sapien massa, id vehicula eros venenatis in. Cras vel hendrerit purus. Cras semper lorem ut purus cursus, id lobortis quam blandit. Nulla scelerisque tincidunt nisl non fringilla.</p>
-
-<p>Integer mollis tellus massa, sed venenatis lorem fermentum sit amet. Cras elementum lobortis porttitor. Curabitur nibh dui, dictum non nisl eget, euismod dapibus ipsum. Mauris eu sem ante. Cras massa enim, cursus commodo libero et, tempor tristique nibh. Curabitur congue pharetra leo. Aliquam ut interdum lectus, a scelerisque turpis.</p>
 
 <!--  <p>(Text from <a href="https://en.wikipedia.org/wiki/Tiger" target="_blank">Wikipedia</a>)</p> -->
 
+<script>
+  var diab_first_outcome_value = 80
+  var diab_first_outcome_percent = diab_first_outcome_value+"%"
+  document.getElementById('progress').style.width = diab_first_outcome_percent;
+  document.getElementById('progress').innerHTML = diab_first_outcome_percent;
+</script>
 
+</body>
 {% endblock %}
+
+
