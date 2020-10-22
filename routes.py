@@ -4,9 +4,14 @@ app = Flask(__name__)
 
 # two decorators, same function
 @app.route('/')
-@app.route('/index.html')
+@app.route('/landing_page.html')
 def index():
-    return render_template('index.html', the_title='Health in Yorkshire & Humber')
+    return render_template('landing_page.html')
+# @app.route('/index.html')
+# def index():
+#     return render_template('index.html', the_title='Health in Yorkshire & Humber')
+
+
 
 @app.route('/symbol.html')
 def symbol():
