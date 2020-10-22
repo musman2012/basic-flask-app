@@ -56,7 +56,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-	color: #57b846;
+	color: #00b33c;
 }
 
 /*---------------------------------------------*/
@@ -127,9 +127,10 @@ iframe {
 [ Contact 2 ]*/
 .bg-contact3 {
   width: 100%;  
-  background-repeat: no-repeat;
-  background-position: center center;
+  /* background-repeat: no-repeat; */
+  background-position: center;
   background-size: cover;
+  object-fit: cover;
 }
 
 .container-contact3 {
@@ -150,11 +151,11 @@ iframe {
 
 .wrap-contact3 {
   width: 700px;
-  background: #80c64a;
-  background: -webkit-linear-gradient(45deg, #56ab2f, #a8e063);
+  background: #063b18;
+  /* background: -webkit-linear-gradient(45deg, #56ab2f, #a8e063);
   background: -o-linear-gradient(45deg, #56ab2f, #a8e063);
   background: -moz-linear-gradient(45deg, #56ab2f, #a8e063);
-  background: linear-gradient(45deg, #56ab2f, #a8e063);
+  background: linear-gradient(45deg, #56ab2f, #a8e063); */
   border-radius: 10px;
   overflow: hidden;
   padding: 72px 55px 65px 55px;
