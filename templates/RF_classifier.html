@@ -1,137 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.tab_link
-{
-	overflow: hidden;
-	border: 1px solid #ccc;
-	background-color: #f1f1f1;
-}
+<!-- <style>
 
-.tab button 
-{
-	background-color: inherit;
-	color: #fff;
-	float: left;
-	border: solid black 1px;
-	outline: none;
-	cursor: pointer;
-	padding: 14px 16px;
-	transition: 0.3s;
-}
-
-.tab button.active
-{
-	background-color: #ccc;
-}
-
-.tab_content
-{
-	display: none;
-	padding: 6px 12px;
-	border: 1px solid #ccc;
-	border-top: none;
-	flex-direction: column;
-	flex: 1;
-}
-
-.grid
-{
-	position: relative;
-}
-
-.item
-{
-	display: block;
-	position: absolute;
-	margin: 5px;
-	z-index: 1;
-	background: #ccc;
-	color: #000;
-}
-
-.item-content
-{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-}
-.item.muuri-item-dragging {
-  z-index: 3;
-}
-.item.muuri-item-releasing {
-  z-index: 2;
-}
-.item.muuri-item-hidden {
-  z-index: 0;
-}
-.page
-{
-	display: flex;
-	flex-direction: row;
-	padding: 2vh 2vw 2vh 2vw;
-	height: 1000px;
-}
-
-.target_pane
-{
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	background-color: #eee;
-	text-align: center;
-	padding-right: 20px;
-}
-
-.classifier_pane
-{
-	display: flex;
-	flex-direction: column;
-	flex-grow: 4;
-}
-body
-{
-	background-color: #f9f9f9;
-}
-
-#outcomes_list
-{
-	list-style-type: none;
-	text-align: left;
-}
-
-.outcomes li.active
-{
-	background-color: #999;
-}
-
-#importance_grid
-{
-	width: 90%;
-}
-
-.map_vis
-{
-	border: solid black 2px;
-	display: inline-block;
-	overflow: hidden;
-	background-color: white;
-}
-svg
-{
-	float: left;
-}
-</style>
+</style> -->
 <link rel="stylesheet" href="../static/css/w3.css">
 <link rel="stylesheet" href="../static/css/w3-theme-black.css">
+<link rel="stylesheet" href="../static/css/page2.css">
 </head>
 <body>
 <div class="page">
 	<div class="target_pane">
-		<h1>Outcome</h1>
+		<!-- <div class="bg-contact3" style="background-image: url('../static/images/visual_bg.JPG');"></div> -->
+		<div style="align-content: center;background-color: transparent;">
+			<img style="width: 40%;height: 60%; "  alt="Visual Ref Logo" src="{{ url_for('static', filename='images/page2logo3.jpg') }}">
+		</div>
+		<!-- <img src="../static/images/visual_bg.JPG"> -->
+		<div style="padding-bottom: 35px;">
+			<div style="padding-bottom: 30px;" class="left_pane_theme">
+				Diabetes
+			</div>
+			<div style="padding-bottom: 30px;">  <!-- This is one element/attr -->
+				<div class="left_pane_attr" style="float:left; width: 50%;">
+					Diabetes Attribute 1
+				</div>
+				<div style="float:right; width: 50%" class="w3-light-grey w3-round-xlarge w3-small">
+					<div id="diab_attr_1" class="w3-container w3-center w3-round-xlarge"></div>
+				</div>
+			</div>
+
+			<div style="padding-bottom: 30px;">  <!-- This is one element/attr -->
+				<div class="left_pane_attr" style="float:left; width: 50%;">
+					Diabetes Attribute 2
+				</div>
+				<div style="float:right; width: 50%" class="w3-light-grey w3-round-xlarge w3-small">
+					<div id="diab_attr_2" class="w3-container w3-center w3-round-xlarge"></div>
+				</div>
+			</div>
+
+			<div style="padding-bottom: 30px;">  <!-- This is one element/attr -->
+				<div class="left_pane_attr" style="float:left; width: 50%;">
+					Diabetes Attribute 3
+				</div>
+				<div style="float:right; width: 50%" class="w3-light-grey w3-round-xlarge w3-small">
+					<div id="diab_attr_3" class="w3-container w3-center w3-round-xlarge"></div>
+				</div>
+			</div>
+		</div>
+
+		<div style="padding-bottom: 35px;">
+			<div style="padding-bottom: 30px;" class="left_pane_theme">
+				Falls
+			</div>
+			<div style="padding-bottom: 30px;">  <!-- This is one element/attr -->
+				<div class="left_pane_attr" style="float:left; width: 50%;">
+					Falls Attribute 1
+				</div>
+				<div style="float:right; width: 50%" class="w3-light-grey w3-round-xlarge w3-small">
+					<div id="falls_attr_1" class="w3-container w3-center w3-round-xlarge"></div>
+				</div>
+			</div>
+
+			<div style="padding-bottom: 30px;">  <!-- This is one element/attr -->
+				<div class="left_pane_attr" style="float:left; width: 50%;">
+					Falls Attribute 2
+				</div>
+				<div style="float:right; width: 50%" class="w3-light-grey w3-round-xlarge w3-small">
+					<div id="falls_attr_2" class="w3-container w3-center w3-round-xlarge"></div>
+				</div>
+			</div>
+
+			<div style="padding-bottom: 30px;">  <!-- This is one element/attr -->
+				<div class="left_pane_attr" style="float:left; width: 50%;">
+					Falls Attribute 3
+				</div>
+				<div style="float:right; width: 50%" class="w3-light-grey w3-round-xlarge w3-small">
+					<div id="falls_attr_3" class="w3-container w3-center w3-round-xlarge"></div>
+				</div>
+			</div>
+		</div>
+
+		<div style="padding-bottom: 35px;">
+			<div style="padding-bottom: 30px;" class="left_pane_theme">
+				Admission & Referrals
+			</div>
+			<div style="padding-bottom: 30px;">  <!-- This is one element/attr -->
+				<div class="left_pane_attr" style="float:left; width: 50%;">
+					AE Attribute 1
+				</div>
+				<div style="float:right; width: 50%" class="w3-light-grey w3-round-xlarge w3-small">
+					<div id="ae_attr_1" class="w3-container w3-center w3-round-xlarge"></div>
+				</div>
+			</div>
+
+			<div style="padding-bottom: 30px;">  <!-- This is one element/attr -->
+				<div class="left_pane_attr" style="float:left; width: 50%;">
+					AE Attribute 2
+				</div>
+				<div style="float:right; width: 50%" class="w3-light-grey w3-round-xlarge w3-small">
+					<div id="ae_attr_2" class="w3-container w3-center w3-round-xlarge"></div>
+				</div>
+			</div>
+
+			<div style="padding-bottom: 30px;">  <!-- This is one element/attr -->
+				<div class="left_pane_attr" style="float:left; width: 50%;">
+					AE Attribute 3
+				</div>
+				<div style="float:right; width: 50%" class="w3-light-grey w3-round-xlarge w3-small">
+					<div id="ae_attr_3" class="w3-container w3-center w3-round-xlarge"></div>
+				</div>
+			</div>
+		</div>
+		<!-- <h1>Outcome</h1> -->
 		<div>
 			<ul id="outcomes_list">
 				<li>
@@ -145,6 +125,7 @@ svg
 					</ul>
 				</li>
 			</ul>
+			<!-- Following code from Isacc might be useful -->
 			<div>
 				<input type="button" id="run_RF_button" value="Find Predictors" style="background-color: grey"> </input>
 				<label for="number_of_predictors">Number of Predictors:</label>
@@ -154,12 +135,23 @@ svg
 	</div>
 	
 	<div class="classifier_pane">
-		<h1>VisualRF</h1>
-		<div class="tab w3-bar w3-theme w3-left-align w3-large">
-			<button class="tab_link w3-bar-item w3-hover-white" id="details_tab_button">Details</button>
-			<button class="tab_link w3-bar-item w3-hover-white" id="vis_tab_button">Visualisation</button>
-			<button class="tab_link w3-bar-item" id="notes_tab_button">Notes</button>
-			<button class="tab_link w3-bar-item" id="map_tab_button">Class Mappings</button>
+		<h1>VisualRef</h1>
+		<div class="tab w3-bar w3-theme w3-left-align w3-large ">
+			<button style="border: black; border-width: thin; border-style: solid;" class="tab_link w3-bar-item w3-hover-white  w3-green" id="details_tab_button">Details</button>
+			<button style="border: black; border-width: thin; border-style: solid;" class="tab_link w3-bar-item w3-hover-white w3-green" id="vis_tab_button">Visualisation</button>
+			<button style="border: black; border-width: thin; border-style: solid;" class="tab_link w3-bar-item w3-hover-white  w3-green" id="details_tab_button">Explore Trends</button>
+			<button style="border: black; border-width: thin; border-style: solid;" class="tab_link w3-bar-item w3-hover-white w3-green" id="vis_tab_button">Predict</button>
+			<button style="border: black; border-width: thin; border-style: solid;" class="tab_link w3-bar-item w3-hover-white  w3-green" id="details_tab_button">Design</button>
+			<button style="border: black; border-width: thin; border-style: solid;" class="tab_link w3-bar-item w3-hover-white w3-green" id="vis_tab_button">Report and Share</button>
+			<button style="border: black; border-width: thin; border-style: solid;" class="tab_link w3-bar-item   w3-green" id="notes_tab_button">Notes</button>
+			<button style="border: black; border-width: thin; border-style: solid;" class="tab_link w3-bar-item   w3-green" id="map_tab_button">Class Mappings</button>
+		</div>
+
+		<div class="right_top">
+			
+		</div>
+		<div class="right_bottom">
+			
 		</div>
 
 		<div id="details_tab" class="tab_content">
@@ -189,5 +181,7 @@ svg
 <script src="../static/vendor/muuri.min.js" type="text/javascript"></script>
 <script src="../static/vendor/jquery.min.js"></script>
 <script src="../static/js/main.js" type="text/javascript"></script>
+<script src="../static/js/left_pane.js" type="text/javascript"></script>
+
 </body>
 </html>
