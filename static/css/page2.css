@@ -117,10 +117,23 @@
   display: block;
   font-family: Poppins;
   font-size: 30px;
-  color: rgb(0, 0, 0);
+  color:white;
   line-height: 1.2;
   text-align: left;
   padding-left: 5px;
+  
+}
+
+.left_pane_theme:hover {
+  cursor: hand;
+  cursor: pointer;
+  font-size: 33px;
+}
+
+.theme_attributes
+{
+  display:none;
+  visibility: hidden;
 }
 
 .left_pane_attr
@@ -128,7 +141,7 @@
   display: block;
   font-family: Poppins;
   font-size: 18px;
-  color: rgb(0, 0, 0);
+  color:rgb(196, 224, 205);
   line-height: 1.2;
   text-align: left;
 }
@@ -138,9 +151,11 @@
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-	background-color:#bfe6be;
+	background-color:#606d6075;
 	text-align: center;
-	padding-right: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  border-color: black;
 }
 
 .classifier_pane
@@ -151,7 +166,7 @@
 }
 body
 {
-	background-color:#e4f0e5;
+	background-color:#595c5975;
 }
 
 #outcomes_list
@@ -315,7 +330,7 @@ hr.style-two {
 
 .wrap-contact3 {
   width: 700px;
-  background: #063b18;
+  background: #cedfd3;
   /* background: -webkit-linear-gradient(45deg, #56ab2f, #a8e063);
   background: -o-linear-gradient(45deg, #56ab2f, #a8e063);
   background: -moz-linear-gradient(45deg, #56ab2f, #a8e063);

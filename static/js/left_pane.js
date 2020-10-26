@@ -1,3 +1,21 @@
+$("#theme_falls").click(function(){
+    // GetContent("xxx");
+    console.log('Alert');
+    changeFalls();
+
+});
+function changeFalls()
+{
+    //debugger;
+    console.log('Falls clicked')
+    var obj_element = $('#falls_attr')
+    if ($('#falls_attr').css('visibility') == 'hidden')
+        $('#falls_attr').css('visibility','visible'); // = 'visible';
+    else
+        $('#falls_attr').css('visibility','hidden');
+        //$('#falls_attr').style.visibility = 'hidden';
+
+}
 
 let diab_values = [80, 60, 95];
 let diab_percents = [diab_values[0] + "%"];
@@ -68,3 +86,6 @@ for (i = 0; i < ae_values.length; i++) {
     document.getElementById('ae_attr_'+j).innerHTML = ae_percents[i];
     document.getElementById("ae_attr_"+j).classList.add(mcolor);
 }
+
+
+
