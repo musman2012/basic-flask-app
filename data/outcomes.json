@@ -1,4 +1,0 @@
-{
-	"clinical_outcomes": ["country", "delivery", "gest_time"],
-	"provider_outcomes": ["gender", "Exclusive_breast_feeding", "Regular_formula"]
-}

@@ -154,15 +154,15 @@ hr.style-two {
 }
 
 .wrap-contact3 {
-  width: 700px;
-  background: #063b18;
+  width: 500px;
+  background: #164726;
   /* background: -webkit-linear-gradient(45deg, #56ab2f, #a8e063);
   background: -o-linear-gradient(45deg, #56ab2f, #a8e063);
   background: -moz-linear-gradient(45deg, #56ab2f, #a8e063);
   background: linear-gradient(45deg, #56ab2f, #a8e063); */
   border-radius: 10px;
   overflow: hidden;
-  padding: 72px 55px 65px 55px;
+  padding: 72px 55px 20px 20px;
 }
 
 
@@ -187,7 +187,7 @@ hr.style-two {
 .contact3-theme {
   display: block;
   font-family: Poppins-Bold;
-  font-size: 20px;
+  font-size: 15px;
   color: #fff;
   line-height: 1.2;
   text-align: left;
@@ -286,7 +286,7 @@ textarea.input3 {
 
 .contact3-form-btn {
   font-family: Poppins-Medium;
-  font-size: 16px;
+  font-size: 12px;
   color: #555555;
   line-height: 1.2;
   text-transform: uppercase;
@@ -299,7 +299,7 @@ textarea.input3 {
   justify-content: center;
   align-items: center;
   padding: 0 15px;
-  min-width: 590px;
+  min-width: 430px;
   height: 50px;
   border-radius: 2px;
   position: relative;
@@ -347,7 +347,7 @@ textarea.input3 {
 
 @media (max-width: 576px) {
   .wrap-contact3 {
-    padding: 72px 15px 65px 15px;
+    padding: 50px 15px 25px 15px;
   }
 }
 
